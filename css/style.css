@@ -1,0 +1,474 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*-----------------------------------
+        I N T R O   P A G E
+-----------------------------------*/
+
+.overlay1 {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #101010;
+}
+
+.overlay1 p {
+    font-size: 19rem;
+    font-weight: 800;
+}
+
+.screen {
+    color: #323232;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn1 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.btn2 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn3 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    color: #FFFFFF;
+    display: block;
+    padding: 1.3rem 1.7rem;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    border: 2px solid #FFFFFF;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    background: none;
+    transition: 0.8 ease-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #101010;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    background: #FFFFFF;
+    bottom: 0;
+    right: 0;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    transition: top 0.8s ease-out;
+}
+
+.btn:hover:before {
+    top: 0;
+}
+
+/*-----------------------------------
+            S I D E   N A V
+-----------------------------------*/
+
+@media (min-width: 500px) {
+    body {
+        margin: 3rem;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+button {
+    background: transparent;
+    border: 0;
+}
+
+*:focus,
+*:active {
+    outline: 0;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 1px 1px #323232;
+}
+
+::-moz-selection {
+    background: #323232;
+    color: #FFFFFF;
+}
+
+::selection {
+    background: #323232;
+    color: #FFFFFF;
+}
+
+::-moz-selection {
+    background: #323232;
+    color: #FFFFFF;
+}
+
+.offscreen-nav {
+    background: transparent;
+    color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.offscreen-nav__content {
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.offscreen-nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.offscreen-nav__nav-toggle {
+    transition: background .3s;
+    padding: 0.6666666667rem;
+    border-radius: 5px;
+    background: #10101031;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-right: 1rem;
+}
+
+.offscreen-nav__nav-toggle:hover,
+.offscreen-nav__nav-toggle:active {
+    color: #101010;
+    background: #FFFFFF;
+}
+
+.offscreen-nav__hamburger {
+    display: inline-block;
+    margin: 0;
+}
+
+.offscreen-nav__hamburger--active .offscreen-nav__hamburger-line--1 {
+    -webkit-transform: rotate(45deg) translate(8px, 7px);
+    transform: rotate(45deg) translate(8px, 7px);
+}
+
+.offscreen-nav__hamburger--active .offscreen-nav__hamburger-line--2 {
+    opacity: 0;
+}
+
+.offscreen-nav__hamburger--active .offscreen-nav__hamburger-line--3 {
+    -webkit-transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.offscreen-nav__hamburger-line {
+    transition: all .7s;
+    width: 25px;
+    height: 2px;
+    background: #FFFFFF;
+}
+
+.offscreen-nav__hamburger-line:not(:last-of-type) {
+    margin-bottom: 8px;
+}
+
+.offscreen-nav__hamburger-line--1 {
+    will-change: transform;
+}
+
+.offscreen-nav__hamburger-line--2 {
+    will-change: transform;
+}
+
+.offscreen-nav__hamburger-line--3 {
+    will-change: transform;
+}
+
+.offscreen-nav__hamburger-text {
+    margin: 0;
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .offscreen-nav__hamburger-text {
+        margin-left: 1rem;
+        display: inherit;
+    }
+}
+
+.offscreen-nav__title h1 {
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+.offscreen-nav__title h1 .icon__graphic {
+    font-size: 2.4rem;
+}
+
+.offscreen-nav__nav {
+    will-change: transform;
+    background: #323232;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    position: fixed;
+    margin-top: 1rem;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 3;
+    border-radius: 0 5px 5px 0;
+}
+
+.offscreen-nav__nav--active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.offscreen-nav__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: background .3s;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.6666666667rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .offscreen-nav__link {
+        padding: 1rem 1.5rem;
+    }
+}
+
+.offscreen-nav__link:first-child {
+    border-radius: 0 5px 0 0;
+}
+
+.offscreen-nav__link:last-child {
+    border-radius: 0 0 5px 0;
+}
+
+.offscreen-nav__link:not(:last-child) {
+    border-bottom: 2px solid #FFFFFF33;
+}
+
+.offscreen-nav__link:hover,
+.offscreen-nav__link:active {
+    background: #858585AF;
+    color: #FFFFFF;
+}
+
+.offscreen-nav__link .icon__graphic {
+    color: #FFFFFF;
+    margin-right: 1rem;
+    font-size: 2.4rem;
+}
+
+.offscreen-nav__overlay {
+    transition: opacity .3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    background: #000000CC;
+    z-index: -100;
+    opacity: 0;
+}
+
+.offscreen-nav__overlay--active {
+    opacity: 1;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.offscreen-nav--fixed {
+    position: fixed;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*-----------------------------------
+            A B O U T   M E
+-----------------------------------*/
+
+#about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #323232
+}
+
+.overlay2 {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #209AAA;
+}
+
+.job {
+    position: relative;
+    top: 4%;
+    right: -55%;
+    color: #FFFFFF;
+    width: 40%;
+    background: #414141;
+    padding: 0.5rem;
+    border-bottom: #209AAA 5px solid;
+}
+
+.job h3 {
+    color: #209AAA;
+}
+
+.job1 {
+    padding: 2%;
+}
+
+.job2 {
+    padding: 2%;
+    margin-top: 3%;
+}
+
+.job3 {
+    padding: 2%;
+    margin-top: 3%;
+}
+
+h6 {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.resume {
+    line-height: 1.9rem;
+    color: #209AAA;
+}
+
+.resume a:hover {
+    color: #26B1C4;
+}
+
+.resume a:visited {
+    color: #1A8391;
+}
+
+.resume a:hover:visited {
+    color: #26B1C4;
+}
+
+.content {
+    width: 40%;
+    margin: 0 auto;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    transform: translate(0 -50%);
+}
+
+.content img {
+    width: 30%;
+    margin-left: 27%;
+    border-radius: 50%;
+    border: 3px double #B6B6B6;
+}
+
+.content h1 {
+    font-size: 6rem;
+    color: #209AAA;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-top: 0;
+    text-align: left;
+    color: #B6B6B6;
+    line-height: 1.9rem;
+}
+
+/*-----------------------------------
+            P R O J E C T S
+-----------------------------------*/
+
+#projects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #211E3A
+}
+
+.overlay3 {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #9055A2;
+}
+
+.img {
+    margin: 2.3%;
+    width: 20%;
+}
+
+/*-----------------------------------
+        C O N T A C T   M E 
+-----------------------------------*/

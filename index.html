@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--GOOGLE FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!--MAIN CSS-->
+    <link href="css/style.css" rel="stylesheet">
+    <!--FAVICON-->
+
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+    <title>TC Brown | Designer / Developer</title>
+</head>
+
+<body>
+    <header>
+        <div class="offscreen-nav">
+            <div class="offscreen-nav__content">
+                <div class="offscreen-nav__bar">
+                    <a class="offscreen-nav__nav-toggle">
+                        <div class="offscreen-nav__hamburger">
+                            <div class="offscreen-nav__hamburger-line offscreen-nav__hamburger-line--1"></div>
+                            <div class="offscreen-nav__hamburger-line offscreen-nav__hamburger-line--2"></div>
+                            <div class="offscreen-nav__hamburger-line offscreen-nav__hamburger-line--3"></div>
+                        </div>
+                    </a>
+
+                </div>
+                <nav class="offscreen-nav__nav">
+                    <a class="offscreen-nav__link" href="#" onclick="homeNav()">
+                        <span class="offscreen-nav__link-text">HOME</span>
+                    </a>
+                    <a class="offscreen-nav__link" href="#" onclick="aboutMeNav()">
+                        <span class="offscreen-nav__link-text">ABOUT ME</span>
+                    </a>
+                    <a class="offscreen-nav__link" href="#" onclick="projectsNav()">
+                        <span class="offscreen-nav__link-text">PROJECTS</span>
+                    </a>
+                    <a class="offscreen-nav__link" href="#" onclick="contactNav()">
+                        <span class="offscreen-nav__link-text">CONTACT ME</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="offscreen-nav__overlay"></div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay1">
+            <p class="screen">TCBDEV</p>
+        </div>
+        <div class="intro">
+            <button class="btn btn1" onclick="aboutMe()" type="button" name="button">ABOUT ME</button>
+            <button class="btn btn2" onclick="projects()" type="button" name="button">PROJECTS</button>
+            <button class="btn btn3" onclick="contact()" type="button" name="button">CONTACT ME</button>
+        </div>
+    </div>
+    <div class="overlay2"></div>
+    <div id="about">
+        <div class="content">
+            <img src="img/tcb.png" alt="TC Brown">
+            <h1>About Me</h1>
+            <p class="about-txt">
+                Hello! My name is TC Brown. I am a front-end web developer who focuses on writing clean, elegant,
+                efficient code. I have a passion for designing functional and lovely experiences that will keep
+                your customers coming back for more! I am proficient in HTML5, CSS3, JavaScript with
+                object-oriented programming, ES6, jQuery.
+            </p>
+            <div class="resume">
+                <h3>
+                    <a href="https://drive.google.com/file/d/1-owrQhQQ1fqL7PFvz88wSQamaHnA0NIC/view?usp=sharing" target="_blank">View
+                        Full Resume Here</a>
+                </h3>
+            </div>
+
+        </div>
+        <div class="job job1">
+            <h3>VIRTUOSO</h3>
+            <h4>COORDINATOR, &nbsp; CRUISE SALES</h4>
+            <h6>
+                <ul>
+                    <li>Manage weekly content and produce Cruise News e-newsletter, using HTML5 & CSS3.</li>
+                    <li>Manage headquarter group program with cruise suppliers, Virtuoso service center and account
+                        managers.</li>
+                    <li>Coordinate annual planning meeting details, including food/beverage, facilities and
+                        scheduling.</li>
+                </ul>
+            </h6>
+        </div>
+        <div class="job job2">
+            <h3>KALL8</h3>
+            <h4>MANAGER, &nbsp; CUSTOMER RELATIONS</h4>
+            <h6>
+                <ul>
+                    <li>Reduced average Call Abandon Rates from 20% to 12% and it continues to fall.</li>
+                    <ul>
+                        <li>Introduced a monthly incentive program for Most Calls Taken, Most Hourly Checks, and
+                            Most Technical Tickets Completed.</li>
+                    </ul>
+                    <li>Created ongoing contests designed to save customers who were cancelling services with
+                        Kall8.</li>
+                </ul>
+            </h6>
+        </div>
+        <div class="job job3">
+            <h3>HOLLAND AMERICA LINE</h3>
+            <h4>SUPERVISOR, &nbsp; SHIP SERVICES</h4>
+            <h6>
+                <ul>
+                    <li>Led department to exceed sales goals. In 2015, increased Indulgences sales year over year
+                        by 10%, increased sales by
+                        13.68%, and increased overall revenue of targeted items up to 33%.</li>
+                    <li>Ensured efficient teamwork by optimizing the information technology platforms used by the
+                        team. For example, tested
+                        and documented issues within the company’s reservations software and implemented Siebel to
+                        create efficiencies in
+                        capturing guest preferences.</li>
+                </ul>
+            </h6>
+        </div>
+    </div>
+    <div class="overlay3"></div>
+    <div id="projects">
+        <div class="prjct">
+            <p class="sites">Projects</p>
+            <a href="https://tcbdev.github.io/classicarcadegame/" target="_blank">
+                <img src="img/arcade.JPG" class="img" alt="Frogger type game">
+            </a>
+            <a href="https://tcbdev.github.io/MemoryGame/" target="_blank">
+                <img src="img/memory.JPG" class="img" alt="Memory Game">
+            </a>
+            <a href="https://tcbdev.github.io/restaurantreview/" target="_blank">
+                <img src="img/RRApp.JPG" class="img" alt="Restaurant Review App">
+            </a>
+            <a href="https://codepen.io/tcbdev/full/VqVMEr" target="_blank">
+                <img src="img/shadow.JPG" class="img" target="_blank" alt="Shadow - Javascript Exp">
+            </a>
+        </div>
+    </div>
+    <script src="js/js.js"></script>
+
+</body>
+
+</html>
